@@ -1,0 +1,45 @@
+export default {
+  expo: {
+    name: "mobile",
+    slug: "mobile",
+    version: "1.0.0",
+    orientation: "portrait",
+    icon: "./assets/images/splash-icon.png",
+    scheme: "mobile",
+    userInterfaceStyle: "automatic",
+    newArchEnabled: true,
+    ios: {
+      supportsTablet: true
+    },
+    android: {
+      adaptiveIcon: {
+        foregroundImage: "./assets/images/splash-icon.png",
+        backgroundColor: "#ffffff"
+      },
+      edgeToEdgeEnabled: true
+    },
+    web: {
+      bundler: "metro",
+      output: "static",
+      favicon: "./assets/images/splash-icon.png"
+    },
+    plugins: [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ]
+    ],
+    experiments: {
+      typedRoutes: true
+    },
+    extra: {
+      clerkPublishableKey: "pk_test_Z3JlYXQtbWFja2VyZWwtOTAuY2xlcmsuYWNjb3VudHMuZGV2JA"
+    }
+  }
+};
