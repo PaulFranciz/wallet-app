@@ -1,9 +1,18 @@
 import cron from "cron";
 import https from "https";
+import http from "http";
+
+// Compute the ping URL at call time so env loaded later (e.g., via dotenv) is respected
+const getPingUrl = () => {
+  const port = process.env.PORT || 5001;
+  return process.env.API_URL || `http://127.0.0.1:${port}/api/health`;
+};
 
 const job = new cron.CronJob("*/14 * * * *", function () {
-  https
-    .get(process.env.API_URL, (res) => {
+  const url = getPingUrl();
+  const client = url.startsWith("https") ? https : http;
+  client
+    .get(url, (res) => {
       if (res.statusCode === 200) console.log("GET request sent successfully");
       else console.log("GET request failed", res.statusCode);
     })
