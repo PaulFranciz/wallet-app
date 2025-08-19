@@ -8,14 +8,14 @@ export const styles = StyleSheet.create({
     backgroundColor: COLORS.background,
   },
   content: {
-    padding: 20,
+    padding: 16,
     paddingBottom: 0,
   },
   header: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginBottom: 20,
+    marginBottom: 24,
     paddingHorizontal: 0,
     paddingVertical: 12,
   },
@@ -23,6 +23,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     alignItems: "center",
+    gap: 12,
   },
   headerLogo: {
     width: 75,
@@ -35,16 +36,17 @@ export const styles = StyleSheet.create({
     fontSize: 14,
     color: COLORS.textLight,
     marginBottom: 2,
+    fontFamily: "Pally-Regular",
   },
   usernameText: {
     fontSize: 16,
-    fontWeight: "600",
     color: COLORS.text,
+    fontFamily: "Pally-Medium",
   },
   headerRight: {
     flexDirection: "row",
     alignItems: "center",
-    gap: 12,
+    gap: 16,
   },
   headerTitle: {
     fontSize: 28,
@@ -66,8 +68,8 @@ export const styles = StyleSheet.create({
   },
   addButtonText: {
     color: COLORS.white,
-    fontWeight: "600",
     marginLeft: 4,
+    fontFamily: "Pally-Medium",
   },
   logoutButton: {
     padding: 10,
@@ -97,12 +99,13 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     color: COLORS.textLight,
     marginBottom: 8,
+    fontFamily: "Pally-Regular",
   },
   balanceAmount: {
     fontSize: 32,
-    fontWeight: "bold",
     color: COLORS.text,
     marginBottom: 20,
+    fontFamily: "Pally-Bold",
   },
   balanceStats: {
     flexDirection: "row",
@@ -120,16 +123,17 @@ export const styles = StyleSheet.create({
     fontSize: 14,
     color: COLORS.textLight,
     marginBottom: 4,
+    fontFamily: "Pally-Regular",
   },
   balanceStatAmount: {
     fontSize: 18,
-    fontWeight: "600",
+    fontFamily: "Pally-Medium",
   },
   sectionTitle: {
     fontSize: 18,
-    fontWeight: "600",
     color: COLORS.text,
     marginBottom: 15,
+    fontFamily: "Pally-Medium",
   },
   transactionCard: {
     backgroundColor: COLORS.card,
@@ -166,25 +170,27 @@ export const styles = StyleSheet.create({
   },
   transactionTitle: {
     fontSize: 16,
-    fontWeight: "500",
     color: COLORS.text,
     marginBottom: 4,
+    fontFamily: "Pally-Medium",
   },
   transactionCategory: {
     fontSize: 14,
     color: COLORS.textLight,
+    fontFamily: "Pally-Regular",
   },
   transactionRight: {
     alignItems: "flex-end",
   },
   transactionAmount: {
     fontSize: 16,
-    fontWeight: "600",
     marginBottom: 4,
+    fontFamily: "Pally-Medium",
   },
   transactionDate: {
     fontSize: 12,
     color: COLORS.textLight,
+    fontFamily: "Pally-Regular",
   },
   deleteButton: {
     padding: 15,
@@ -218,9 +224,9 @@ export const styles = StyleSheet.create({
   },
   emptyStateTitle: {
     fontSize: 18,
-    fontWeight: "600",
     color: COLORS.text,
     marginBottom: 8,
+    fontFamily: "Pally-Medium",
   },
   emptyStateText: {
     color: COLORS.textLight,
@@ -228,6 +234,7 @@ export const styles = StyleSheet.create({
     textAlign: "center",
     marginBottom: 20,
     lineHeight: 20,
+    fontFamily: "Pally-Regular",
   },
   emptyStateButton: {
     backgroundColor: COLORS.primary,
@@ -244,8 +251,8 @@ export const styles = StyleSheet.create({
   },
   emptyStateButtonText: {
     color: COLORS.white,
-    fontWeight: "600",
     marginLeft: 6,
+    fontFamily: "Pally-Medium",
   },
   transactionsHeaderContainer: {
     flexDirection: "row",
@@ -256,7 +263,7 @@ export const styles = StyleSheet.create({
   },
   transactionsList: {
     flex: 1,
-    marginHorizontal: 20,
+    marginHorizontal: 16,
   },
   transactionsListContent: {
     paddingBottom: 20,

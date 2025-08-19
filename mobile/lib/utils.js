@@ -9,3 +9,15 @@ export function formatDate(dateString) {
     day: "numeric",
   });
 }
+
+// Format a number as Nigerian Naira with comma separators and no decimals
+export function formatNaira(amount) {
+  const value = Number(amount) || 0;
+  const abs = Math.abs(value);
+  return new Intl.NumberFormat("en-NG", {
+    style: "currency",
+    currency: "NGN",
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }).format(abs);
+}

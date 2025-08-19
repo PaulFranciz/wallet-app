@@ -4,9 +4,6 @@ import { useCallback, useState } from "react";
 import { Alert } from "react-native";
 import { API_URL } from "../constants/api";
 
-// const API_URL = "https://wallet-api-cxqp.onrender.com/api";
-// const API_URL = "http://localhost:5001/api";
-
 export const useTransactions = (userId) => {
   const [transactions, setTransactions] = useState([]);
   const [summary, setSummary] = useState({
@@ -40,6 +37,7 @@ export const useTransactions = (userId) => {
   const loadData = useCallback(async () => {
     if (!userId) return;
 
+    console.log("Current userId:", userId);
     setIsLoading(true);
     try {
       // can be run in parallel

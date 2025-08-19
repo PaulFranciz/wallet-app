@@ -41,47 +41,47 @@ export default function Page() {
 
   return (
     <View style={styles.container}>
-      <View style={styles.content}>
-        {/* HEADER */}
-        <View style={styles.header}>
-          {/* LEFT */}
-          <View style={styles.headerLeft}>
-            <Image
-              source={require("../../assets/images/logo.png")}
-              style={styles.headerLogo}
-              resizeMode="contain"
-            />
-            <View style={styles.welcomeContainer}>
-              <Text style={styles.welcomeText}>Welcome,</Text>
-              <Text style={styles.usernameText}>
-                {user?.emailAddresses[0]?.emailAddress.split("@")[0]}
-              </Text>
-            </View>
-          </View>
-          {/* RIGHT */}
-          <View style={styles.headerRight}>
-            <TouchableOpacity style={styles.addButton} onPress={() => router.push("/create")}>
-              <Ionicons name="add" size={20} color="#FFF" />
-              <Text style={styles.addButtonText}>Add</Text>
-            </TouchableOpacity>
-            <SignOutButton />
-          </View>
-        </View>
-
-        <BalanceCard summary={summary} />
-
-        <View style={styles.transactionsHeaderContainer}>
-          <Text style={styles.sectionTitle}>Recent Transactions</Text>
-        </View>
-      </View>
-
-      {/* FlatList is a performant way to render long lists in React Native. */}
-      {/* it renders items lazily — only those on the screen. */}
+      {/* FlatList wraps the whole screen so pull-to-refresh works anywhere */}
       <FlatList
         style={styles.transactionsList}
-        contentContainerStyle={styles.transactionsListContent}
+        contentContainerStyle={[styles.transactionsListContent, { flexGrow: 1 }]}
         data={transactions}
         renderItem={({ item }) => <TransactionItem item={item} onDelete={handleDelete} />}
+        ListHeaderComponent={
+          <View style={styles.content}>
+            {/* HEADER */}
+            <View style={styles.header}>
+              {/* LEFT */}
+              <View style={styles.headerLeft}>
+                <Image
+                  source={require("../../assets/images/logo.png")}
+                  style={styles.headerLogo}
+                  resizeMode="contain"
+                />
+                <View style={styles.welcomeContainer}>
+                  <Text style={styles.welcomeText}>Welcome,</Text>
+                  <Text style={styles.usernameText}>
+                    {user?.emailAddresses[0]?.emailAddress.split("@")[0]}
+                  </Text>
+                </View>
+              </View>
+              {/* RIGHT */}
+              <View style={styles.headerRight}>
+                <TouchableOpacity style={styles.addButton} onPress={() => router.push("/create")}>
+                  <Ionicons name="add" size={20} color="#FFF" />
+                  <Text style={styles.addButtonText}>Add</Text>
+                </TouchableOpacity>
+                <SignOutButton />
+              </View>
+            </View>
+
+            <BalanceCard summary={summary} />
+
+            <View style={styles.transactionsHeaderContainer}>
+              <Text style={styles.sectionTitle}>Recent Transactions</Text>
+            </View>
+          </View>
+        }
         ListEmptyComponent={<NoTransactionsFound />}
         showsVerticalScrollIndicator={false}
         refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />}

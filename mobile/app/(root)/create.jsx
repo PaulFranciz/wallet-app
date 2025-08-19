@@ -139,7 +139,7 @@ const CreateScreen = () => {
           <Text style={styles.currencySymbol}>₦</Text>
           <TextInput
             style={styles.amountInput}
-            placeholder="0.00"
+            placeholder="0"
             placeholderTextColor={COLORS.textLight}
             value={amount}
             onChangeText={setAmount}

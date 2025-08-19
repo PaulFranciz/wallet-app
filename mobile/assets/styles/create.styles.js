@@ -17,8 +17,8 @@ export const styles = StyleSheet.create({
   },
   headerTitle: {
     fontSize: 18,
-    fontWeight: "600",
     color: COLORS.text,
+    fontFamily: "Pally-Medium",
   },
   backButton: {
     padding: 5,
@@ -34,7 +34,7 @@ export const styles = StyleSheet.create({
   saveButton: {
     fontSize: 16,
     color: COLORS.primary,
-    fontWeight: "600",
+    fontFamily: "Pally-Medium",
   },
   card: {
     backgroundColor: COLORS.card,
@@ -72,7 +72,7 @@ export const styles = StyleSheet.create({
   typeButtonText: {
     color: COLORS.text,
     fontSize: 16,
-    fontWeight: "500",
+    fontFamily: "Pally-Medium",
   },
   typeButtonTextActive: {
     color: COLORS.white,
@@ -87,15 +87,15 @@ export const styles = StyleSheet.create({
   },
   currencySymbol: {
     fontSize: 32,
-    fontWeight: "bold",
     color: COLORS.text,
     marginRight: 8,
+    fontFamily: "Pally-Bold",
   },
   amountInput: {
     flex: 1,
     fontSize: 36,
-    fontWeight: "bold",
     color: COLORS.text,
+    fontFamily: "Pally-Bold",
   },
   inputContainer: {
     flexDirection: "row",
@@ -115,15 +115,16 @@ export const styles = StyleSheet.create({
     padding: 12,
     fontSize: 16,
     color: COLORS.text,
+    fontFamily: "Pally-Regular",
   },
   sectionTitle: {
     fontSize: 18,
-    fontWeight: "600",
     color: COLORS.text,
     marginBottom: 15,
     marginTop: 10,
     flexDirection: "row",
     alignItems: "center",
+    fontFamily: "Pally-Medium",
   },
   categoryGrid: {
     flexDirection: "row",
@@ -150,6 +151,7 @@ export const styles = StyleSheet.create({
   categoryButtonText: {
     color: COLORS.text,
     fontSize: 14,
+    fontFamily: "Pally-Regular",
   },
   categoryButtonTextActive: {
     color: COLORS.white,
